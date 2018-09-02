@@ -1,4 +1,4 @@
-# NgPromsie
+# NgObservable
 
 ## Step by Step
 
