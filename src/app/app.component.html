@@ -1,0 +1,27 @@
+<mat-grid-list cols="3" rowHeight="3:1">
+  <mat-grid-tile>
+    <h2>Star Wars Character &nbsp;</h2>
+    <form [formGroup]="searchForm" class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" formControlName="term" placeholder="keyword">
+      </mat-form-field>
+      <mat-icon mat-list-icon>search</mat-icon>
+    </form>
+  </mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile>
+  <div class="container">
+    <mat-list *ngIf="results.length > 0">
+      <h3 mat-subheader>Characters</h3>
+      <mat-list-item *ngFor="let result of results">
+        <mat-icon mat-list-icon>movie</mat-icon>
+        <h4 mat-line>{{result.name}}</h4>
+        <p mat-line> {{result.name}} is a character with a heigh of {{result.height}}. </p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  </mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
+
